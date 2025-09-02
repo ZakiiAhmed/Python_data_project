@@ -71,13 +71,13 @@ SQL remains the most consistently demanded skill throughout the year, although i
 Both Python and Tableau show relatively stable demand throughout the year with some fluctuations but remain essential skills for data analysts. Power BI, while less demanded compared to the others, shows a slight upward trend towards the year's end.
 ## 3. How well do jobs and skills pay for Data Analysts?
 To identify the highest-paying roles and skills, I only got jobs in the United States and looked at their median salary. But first I looked at the salary distributions of common data jobs like Data Scientist, Data Engineer, and Data Analyst, to get an idea of which jobs are paid the most.
-    ```python
+```python
     sns.boxplot(data=df_US_top6, x='salary_year_avg', y='job_title_short', order=job_order)
 
     ticks_x = plt.FuncFormatter(lambda y, pos: f'${int(y/1000)}K')
     plt.gca().xaxis.set_major_formatter(ticks_x)
     plt.show()
-    ```
+```
 ![Salary Distributions of Data Jobs in the US](project/images/Salary_Distribution_boxplot.png)
 ### Insights:
 There's a significant variation in salary ranges across different job titles. Senior Data Scientist positions tend to have the highest salary potential, with up to $600K, indicating the high value placed on advanced data skills and experience in the industry.
@@ -88,7 +88,7 @@ The median salaries increase with the seniority and specialization of the roles.
 
 Next, a subplot was created to determine and compare the highest paid and most indemand skills for Data Analysts in the US.
 
-    ```python
+```python
 fig, ax = plt.subplots(2, 1)  
 
 # Top 10 Highest Paid Skills for Data Analysts
@@ -116,7 +116,7 @@ ax[1].xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'${int(x/1000)}K
 sns.set_theme(style='ticks')
 plt.tight_layout()
 plt.show()
-    ```
+```
 ![The Highest Paid & Most in Demand Skill for Data Analysts in the US](project/images/Subplot_for_Highest_Paid_and_Most_in_Demand_Skill_for_Data_Analysts_in_the_US.png)
 
 *Two separate bar graphs visualizing the highest paid skills and most in-demand skills for data analysts in the US.*
